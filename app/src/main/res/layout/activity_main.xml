@@ -2,50 +2,52 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@android:color/white"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:id="@+id/cipllogo"
                 android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginLeft="0dp"
                 android:background="@android:color/white"
                 android:src="@mipmap/cipl_logo" />
 
             <TextView
+                android:id="@+id/logoText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:paddingLeft="5sp"
-                android:paddingTop="10sp"
-                android:text="Chaplot Investments Private Limited"
-                android:textSize="18sp" />
+                android:background="@android:color/white"
+                android:paddingTop="15sp"
+                android:text="CHAPLOT INVESTMENTS"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textColorLink="@color/textColor"
+                android:textSize="20sp" />
 
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/tabColor"
+            android:keepScreenOn="true"
+            app:tabIndicatorColor="@color/textColor"
+            app:tabSelectedTextColor="@color/textColor"
+            app:tabTextColor="@color/textColor" />
 
     </android.support.design.widget.AppBarLayout>
 

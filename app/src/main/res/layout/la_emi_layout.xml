@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/la_emi_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bodyBack"
+        android:paddingTop="28dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="Invoice(Showroom)"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/invoiceShowroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Down Payment"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/downPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="PC(%)"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/pcPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="PC(Fixed)"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/pcFixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Interest Rate"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/interestRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Flat Tenure"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/flatTenure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="# Advanced EMI"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/advanceEmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Loan Amount"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/loanAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Invoice(CIPL)"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/invoiceCIPL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="LTV"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/ltv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="60dp"
+                android:background="@color/tabColor"
+                android:minHeight="60dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:text="EMI Calculator"
+                android:textColor="@color/textColor"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="# Short EMIs"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/shortEMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="EMI"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/emi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:height="60dp"
+                android:minHeight="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Pmt Tenure"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/pmtTenure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:height="40dp"
+                android:background="@drawable/textbox"
+                android:ems="8"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:minHeight="40dp"
+                android:paddingLeft="5dp"
+                android:textColorLink="@android:color/black" />
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
+
