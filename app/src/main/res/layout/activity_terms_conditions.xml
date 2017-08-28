@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TermsConditionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/termsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bodyBack"
+            android:text="@string/terms_conditions"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp">
+
+        </WebView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/acceptButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2sp"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:background="@color/bodyBack"
+                android:capitalize="none"
+                android:text="Accept"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/declineButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2sp"
+                android:layout_marginLeft="2sp"
+                android:layout_marginRight="4sp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
+                android:capitalize="none"
+                android:text="Decline"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

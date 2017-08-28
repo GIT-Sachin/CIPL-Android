@@ -16,26 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/white"
+            android:weightSum="1"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:background="@android:color/white"
-                android:src="@mipmap/cipl_logo" />
-
-            <TextView
-                android:id="@+id/logoText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.91"
                 android:background="@android:color/white"
-                android:paddingTop="15sp"
-                android:text="CHAPLOT INVESTMENTS"
-                android:textAlignment="center"
-                android:textColor="@color/textColor"
-                android:textColorLink="@color/textColor"
-                android:textSize="20sp" />
+                android:src="@mipmap/header" />
 
         </android.support.v7.widget.Toolbar>
 

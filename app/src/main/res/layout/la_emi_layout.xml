@@ -25,7 +25,7 @@
                 android:minHeight="60dp"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
-                android:text="Invoice(Showroom)"
+                android:text="@string/invoice_showroom"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -59,7 +59,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Down Payment"
+                android:text="@string/down_payment"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -93,7 +93,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="PC(%)"
+                android:text="@string/pc_variable"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -127,7 +127,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="PC(Fixed)"
+                android:text="@string/pc_fixed"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -161,7 +161,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Interest Rate"
+                android:text="@string/interest_rate"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -195,7 +195,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Flat Tenure"
+                android:text="@string/flat_tenure"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -229,7 +229,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="# Advanced EMI"
+                android:text="@string/advance_emi"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -263,7 +263,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Loan Amount"
+                android:text="@string/loan_amount"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -281,7 +281,9 @@
                 android:inputType="numberDecimal"
                 android:minHeight="40dp"
                 android:paddingLeft="5dp"
-                android:textColorLink="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textColorLink="@android:color/black"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -298,7 +300,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Invoice(CIPL)"
+                android:text="@string/invoice_chaplot"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -332,7 +334,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="LTV"
+                android:text="@string/ltv"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -369,7 +371,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="15dp"
-                android:text="EMI Calculator"
+                android:text="@string/emi_calc"
                 android:textColor="@color/textColor"
                 android:textColorLink="@android:color/background_dark"
                 android:textSize="20dp" />
@@ -390,7 +392,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="# Short EMIs"
+                android:text="@string/short_emi"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -424,7 +426,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="EMI"
+                android:text="@string/emi"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -442,7 +444,9 @@
                 android:inputType="numberDecimal"
                 android:minHeight="40dp"
                 android:paddingLeft="5dp"
-                android:textColorLink="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textColorLink="@android:color/black"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -459,7 +463,7 @@
                 android:minHeight="60dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="Pmt Tenure"
+                android:text="@string/pmt_tenure"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textColorLink="@android:color/background_dark"
@@ -477,7 +481,9 @@
                 android:inputType="numberDecimal"
                 android:minHeight="40dp"
                 android:paddingLeft="5dp"
-                android:textColorLink="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textColorLink="@android:color/black"
+                android:textStyle="bold" />
 
         </TableRow>
 

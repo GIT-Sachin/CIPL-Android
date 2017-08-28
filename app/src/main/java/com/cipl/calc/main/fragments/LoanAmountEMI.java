@@ -145,7 +145,11 @@ public class LoanAmountEMI extends Fragment {
         }
         BigDecimal numerator = loanAmount.multiply(BigDecimal.ONE.add(interestRate.divide(HUNDRED, 10, BigDecimal.ROUND_HALF_EVEN).multiply(flatTenure.divide(TWELVE, 10, BigDecimal.ROUND_HALF_EVEN))));
         BigDecimal emi = numerator.divide(denominator, 10, BigDecimal.ROUND_HALF_EVEN);
-        ((EditText) view.findViewById(R.id.emi)).setText(String.valueOf((int) Math.ceil(emi.doubleValue())));
+        String emiText = null;
+        if ((int) Math.ceil(emi.doubleValue() - emi.doubleValue()) > 0.5) {
+            emiText = String.valueOf(((int) Math.ceil(emi.doubleValue())) - 1);
+        }
+        ((EditText) view.findViewById(R.id.emi)).setText(emiText);
         return true;
     }
 

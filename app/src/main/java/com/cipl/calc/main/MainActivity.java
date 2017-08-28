@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(mViewPager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-        setFontBodoni();
+        //setFontBodoni();
         setFontGothicTabs(findViewById(R.id.tabs));
     }
 
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
         return tv;
     }
 
-    private void setFontBodoni() {
+   /* private void setFontBodoni() {
         TextView tv = (TextView) findViewById(R.id.logoText);
         Typeface bodoni = Typeface.createFromAsset(getAssets(), "fonts/bodoni-mt.TTF");
         tv.setTypeface(bodoni);
-    }
+    }*/
 
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());

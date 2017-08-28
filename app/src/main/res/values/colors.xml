@@ -6,4 +6,6 @@
     <color name="textColor">#1f3864</color>
     <color name="tabColor">#efefef</color>
     <color name="bodyBack">#2f5597</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

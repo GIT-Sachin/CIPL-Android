@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">CIPL Calculator</string>
+    <string name="app_name">Chaplot Calculator</string>
+    <string name="invoice_showroom">Invoice (Showroom)</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="pc_variable">PC (%)</string>
+    <string name="pc_fixed">PC (Fixed)</string>
+    <string name="interest_rate">Interest Rate (%)</string>
+    <string name="flat_tenure">Flat Tenure (Months)</string>
+    <string name="advance_emi">Advance EMI (Nos.)</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="invoice_chaplot">Invoice (Chaplot)</string>
+    <string name="ltv">LTV (%)</string>
+    <string name="short_emi"># Short EMIs</string>
+    <string name="emi">EMI</string>
+    <string name="pmt_tenure">Pmt Tenure</string>
+    <string name="max_ltv">Max. LTV</string>
+    <string name="min_dp">Min. DP</string>
+    <string name="emi_calc">EMI Calculator</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="terms_conditions">Terms and Conditions</string>
 </resources>
