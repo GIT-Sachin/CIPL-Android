@@ -23,7 +23,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
     }
 
     private void configureTermsAndConditions() {
-        setFontGothic(R.id.termsAndConditions);
+        setFontFace(R.id.termsAndConditions, "fonts/Calibri.ttf");
     }
 
     private void configureWebView() {
@@ -33,7 +33,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
 
     private void configureDecline() {
         Button decline = (Button) findViewById(R.id.declineButton);
-        setFontGothic(R.id.declineButton);
+        setFontFace(R.id.declineButton, "fonts/centurygothic.TTF");
         decline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +44,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
 
     private void configureAccept() {
         Button accept = (Button) findViewById(R.id.acceptButton);
-        setFontGothic(R.id.acceptButton);
+        setFontFace(R.id.acceptButton, "fonts/centurygothic.TTF");
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +70,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
         System.exit(0);
     }
 
-    private void setFontGothic(int id) {
+    private void setFontFace(int id, String font) {
         TextView cb = (TextView) findViewById(id);
         Typeface bodoni = Typeface.createFromAsset(getAssets(), "fonts/centurygothic.TTF");
         cb.setTypeface(bodoni);

@@ -57,7 +57,7 @@
                 android:layout_marginLeft="2sp"
                 android:layout_marginRight="4sp"
                 android:layout_weight="1"
-                android:background="@android:color/holo_red_light"
+                android:background="@android:color/darker_gray"
                 android:capitalize="none"
                 android:text="Decline"
                 android:textColor="@android:color/white" />
