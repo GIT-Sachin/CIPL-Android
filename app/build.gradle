@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "com.cipl.calc"
+        applicationId "com.chaplot.calc"
         minSdkVersion 17
         targetSdkVersion 26
         versionCode 3
