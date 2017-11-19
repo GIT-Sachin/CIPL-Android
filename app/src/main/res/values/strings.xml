@@ -9,7 +9,7 @@
     <string name="advance_emi">Advance EMI (Nos.)</string>
     <string name="loan_amount">Loan Amount</string>
     <string name="invoice_chaplot">Invoice (Chaplot)</string>
-    <string name="ltv">LTV (%)</string>
+    <string name="ltv">LTV</string>
     <string name="short_emi"># Short EMIs</string>
     <string name="emi">EMI</string>
     <string name="pmt_tenure">Pmt Tenure</string>

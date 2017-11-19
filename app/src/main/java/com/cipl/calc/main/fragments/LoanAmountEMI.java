@@ -38,7 +38,7 @@ public class LoanAmountEMI extends Fragment {
     private boolean isPCFixed;
     private boolean isInterestRate;
     private boolean isFlatTenure;
-    private boolean isAdvanceEMI;
+    private boolean isAdvanceEMI = true;
     private boolean isLoanAmount;
     private boolean isInvoiceCIPL;
     private boolean isLTV;
@@ -87,7 +87,6 @@ public class LoanAmountEMI extends Fragment {
                         calculateValues();
                         break;
                     case (R.id.advanceEmi):
-                        isAdvanceEMI = editable.length() > 0;
                         calculateValues();
                         break;
                     case (R.id.invoiceCIPL):
@@ -146,8 +145,10 @@ public class LoanAmountEMI extends Fragment {
         BigDecimal numerator = loanAmount.multiply(BigDecimal.ONE.add(interestRate.divide(HUNDRED, 10, BigDecimal.ROUND_HALF_EVEN).multiply(flatTenure.divide(TWELVE, 10, BigDecimal.ROUND_HALF_EVEN))));
         BigDecimal emi = numerator.divide(denominator, 10, BigDecimal.ROUND_HALF_EVEN);
         String emiText = null;
-        if ((int) Math.ceil(emi.doubleValue() - emi.doubleValue()) > 0.5) {
+        if (Math.ceil(emi.doubleValue()) - emi.doubleValue() > 0.5) {
             emiText = String.valueOf(((int) Math.ceil(emi.doubleValue())) - 1);
+        } else {
+            emiText = String.valueOf(((int) Math.ceil(emi.doubleValue())));
         }
         ((EditText) view.findViewById(R.id.emi)).setText(emiText);
         return true;
@@ -167,7 +168,7 @@ public class LoanAmountEMI extends Fragment {
     }
 
     private boolean calculatePMTTenure() {
-        Integer advanceEmi = Integer.valueOf(((EditText) view.findViewById(R.id.advanceEmi)).getText().toString());
+        Integer advanceEmi = getAdvanceEMI().intValue();
         Integer tenure = Integer.valueOf(((EditText) view.findViewById(R.id.flatTenure)).getText().toString());
         if (isShortEMI) {
             Integer shortEMI = Integer.valueOf(((EditText) view.findViewById(R.id.shortEMI)).getText().toString());
@@ -179,7 +180,7 @@ public class LoanAmountEMI extends Fragment {
     }
 
     private boolean calculateLoanAmount() {
-        BigDecimal advanceEmi = new BigDecimal(((EditText) view.findViewById(R.id.advanceEmi)).getText().toString());
+        BigDecimal advanceEmi = getAdvanceEMI();
         BigDecimal invoiceShowRoom = new BigDecimal(((EditText) view.findViewById(R.id.invoiceShowroom)).getText().toString());
         BigDecimal downPayment = new BigDecimal(((EditText) view.findViewById(R.id.downPayment)).getText().toString());
         BigDecimal pcFixed = new BigDecimal(((EditText) view.findViewById(R.id.pcFixed)).getText().toString());
@@ -194,6 +195,13 @@ public class LoanAmountEMI extends Fragment {
         loanAmount.setScale(2, BigDecimal.ROUND_HALF_EVEN);
         ((EditText) view.findViewById(R.id.loanAmount)).setText(String.valueOf((int) Math.ceil(loanAmount.doubleValue())));
         return true;
+    }
+
+    private BigDecimal getAdvanceEMI() {
+        if (((EditText) view.findViewById(R.id.advanceEmi)).getText().length() > 0) {
+            return new BigDecimal(((EditText) view.findViewById(R.id.advanceEmi)).getText().toString());
+        }
+        return BigDecimal.ZERO;
     }
 
     private void setFontGothicBody(View viewById) {

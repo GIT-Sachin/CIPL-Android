@@ -38,7 +38,7 @@ public class MinDPEMI extends Fragment {
     private boolean isPCFixed;
     private boolean isInterestRate;
     private boolean isFlatTenure;
-    private boolean isAdvanceEMI;
+    private boolean isAdvanceEMI = true;
     private boolean isLoanAmount;
     private boolean isMinDP;
     private boolean isShortEMI;
@@ -86,7 +86,6 @@ public class MinDPEMI extends Fragment {
                         calculateValues();
                         break;
                     case (R.id.advanceemi1):
-                        isAdvanceEMI = editable.length() > 0;
                         calculateValues();
                         break;
                     case (R.id.invoicecipl1):
@@ -139,12 +138,7 @@ public class MinDPEMI extends Fragment {
         BigDecimal pcv = new BigDecimal(((EditText) view.findViewById(R.id.pcvariable1)).getText().toString());
         BigDecimal pcf = new BigDecimal(((EditText) view.findViewById(R.id.pcfixed1)).getText().toString());
         BigDecimal emi = new BigDecimal(((EditText) view.findViewById(R.id.emi1)).getText().toString());
-        BigDecimal advemi;
-        if (isAdvanceEMI) {
-            advemi = new BigDecimal(((EditText) view.findViewById(R.id.advanceemi1)).getText().toString());
-        } else {
-            advemi = BigDecimal.ZERO;
-        }
+        BigDecimal advemi = getAdvanceEMI();
         BigDecimal minDP = invoiceShowroom.subtract(loanAmount).add(loanAmount.multiply(pcv.divide(HUNDRED, 10, BigDecimal.ROUND_HALF_EVEN))).add(emi.multiply(advemi)).add(pcf);
         ((EditText) view.findViewById(R.id.mindp)).setText(String.valueOf((int) Math.ceil(minDP.doubleValue())));
         return true;
@@ -171,7 +165,13 @@ public class MinDPEMI extends Fragment {
         }
         BigDecimal numerator = loanAmount.multiply(BigDecimal.ONE.add(interestRate.divide(HUNDRED, 10, BigDecimal.ROUND_HALF_EVEN).multiply(flatTenure.divide(TWELVE, 10, BigDecimal.ROUND_HALF_EVEN))));
         BigDecimal emi = numerator.divide(denominator, 10, BigDecimal.ROUND_HALF_EVEN);
-        ((EditText) view.findViewById(R.id.emi1)).setText(String.valueOf((int) Math.ceil(emi.doubleValue())));
+        String emiText = null;
+        if (Math.ceil(emi.doubleValue()) - emi.doubleValue() > 0.5) {
+            emiText = String.valueOf(((int) Math.ceil(emi.doubleValue())) - 1);
+        } else {
+            emiText = String.valueOf(((int) Math.ceil(emi.doubleValue())));
+        }
+        ((EditText) view.findViewById(R.id.emi1)).setText(emiText);
         return true;
     }
 
@@ -181,7 +181,7 @@ public class MinDPEMI extends Fragment {
     }
 
     private boolean calculatePMTTenure() {
-        Integer advanceEmi = Integer.valueOf(((EditText) view.findViewById(R.id.advanceemi1)).getText().toString());
+        Integer advanceEmi = getAdvanceEMI().intValue();
         Integer tenure = Integer.valueOf(((EditText) view.findViewById(R.id.flattenure1)).getText().toString());
         if (isShortEMI) {
             Integer shortEMI = Integer.valueOf(((EditText) view.findViewById(R.id.shortemi1)).getText().toString());
@@ -190,6 +190,14 @@ public class MinDPEMI extends Fragment {
             ((EditText) view.findViewById(R.id.pmtTenure1)).setText(String.valueOf(tenure - advanceEmi));
         }
         return true;
+    }
+
+
+    private BigDecimal getAdvanceEMI() {
+        if (((EditText) view.findViewById(R.id.advanceemi1)).getText().length() > 0) {
+            return new BigDecimal(((EditText) view.findViewById(R.id.advanceemi1)).getText().toString());
+        }
+        return BigDecimal.ZERO;
     }
 
 

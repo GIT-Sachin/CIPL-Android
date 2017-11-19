@@ -309,7 +309,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:height="40dp"
-                android:background="@drawable/textbox"
+                android:background="@drawable/textboxgray"
                 android:ems="8"
                 android:enabled="false"
                 android:inputType="numberSigned|numberDecimal"
@@ -346,13 +346,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:height="40dp"
-                android:background="@drawable/textbox"
+                android:background="@drawable/textboxgray"
                 android:ems="8"
                 android:enabled="false"
                 android:inputType="numberSigned|numberDecimal"
                 android:minHeight="40dp"
                 android:paddingLeft="5dp"
-                android:textColorLink="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textColorLink="@android:color/black"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -438,8 +440,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:height="40dp"
-                android:background="@drawable/textbox"
+                android:background="@drawable/textboxgray"
                 android:ems="8"
+                android:enabled="false"
                 android:inputType="numberDecimal"
                 android:minHeight="40dp"
                 android:paddingLeft="5dp"
@@ -453,7 +456,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="5dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -474,7 +476,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:height="40dp"
-                android:background="@drawable/textbox"
+                android:background="@drawable/textboxgray"
                 android:ems="8"
                 android:enabled="false"
                 android:inputType="numberDecimal"
